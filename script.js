@@ -1,18 +1,25 @@
 'use sctrict';
 
-let persone = {
-    name: "Olga",
-    age: "28",
-    isMarried: true
-}
+let money = prompt("Ваш бюджет на месяц?", "");
+let time = prompt("Введите дату в формате YYYY-MM-DD","");
+let appData = {
+    money : money,
+    timeDate : time,
+    expenses : {},
+    optionalExpenses : {},
+    income : [],
+    savings : false
+};
 
-console.log("Name is " + persone['name']);
-console.log("Age: " + persone.age);
-console.log("Married: " + persone['isMarried']);
+let article = prompt("Введите обязательную статью расходов в этом месяце","");
+let sumArticle = prompt("Во сколько обойдется?","");
+let article1 = prompt("Введите обязательную статью расходов в этом месяце","");
+let sumArticle1 = prompt("Во сколько обойдется?","");
 
-let number = 4;
-    number = +4;
+appData.expenses[article] = sumArticle;
+appData.expenses[article1] = sumArticle1;
 
-console.log(number);
+alert ("Ваш бюджет на 1 день: " + money/30 + " рублей.");
 
-
+console.log(appData);
+console.log(appData.expenses);
